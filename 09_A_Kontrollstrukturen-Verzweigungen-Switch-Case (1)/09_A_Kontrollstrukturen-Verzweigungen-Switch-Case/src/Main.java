@@ -11,32 +11,15 @@ public class Main {
         Scanner userInputNumber = new Scanner(System.in);
         System.out.println("Enter a weekday with numbers 1 = Monday 2 = Tuesday ...");
         byte weekDayNumber = userInputNumber.nextByte();
-        switch (weekDayNumber){
-            case 1:
-                System.out.println("Monday");
-                break;
-            case 2:
-                System.out.println("Tuesday");
-                break;
-            case 3:
-                System.out.println("Wednesday");
-                break;
-            case 4:
-                System.out.println("Thursday");
-                break;
-            case 5:
-                System.out.println("Friday");
-                break;
-            case 6:
-                System.out.println("Saturday");
-                break;
-            case 7:
-                System.out.println("Sunday");
-                break;
-            default:
-                System.out.println("Wrong number");
-                break;
-
+        switch (weekDayNumber) {
+            case 1 -> System.out.println("Monday");
+            case 2 -> System.out.println("Tuesday");
+            case 3 -> System.out.println("Wednesday");
+            case 4 -> System.out.println("Thursday");
+            case 5 -> System.out.println("Friday");
+            case 6 -> System.out.println("Saturday");
+            case 7 -> System.out.println("Sunday");
+            default -> System.out.println("Wrong number");
         }
 
         //--------------------------------------------------------------------------------------------------------------
@@ -53,33 +36,11 @@ public class Main {
         String month = scanner1.nextLine();
 
         switch (month) {
-            case "Dezember":
-            case "Januar":
-            case "Februar":
-                System.out.println("Winter");
-                break;
-
-            case "März":
-            case "April":
-            case "Mai":
-                System.out.println("Frühling");
-                break;
-
-            case "Juni":
-            case "Juli":
-            case "August":
-                System.out.println("Sommer");
-                break;
-
-            case "September":
-            case "Oktober":
-            case "November":
-                System.out.println("Herbst");
-                break;
-
-            default:
-                System.out.println("Kein gültiger Monat!");
-                break;
+            case "Dezember", "Januar", "Februar" -> System.out.println("Winter");
+            case "März", "April", "Mai" -> System.out.println("Frühling");
+            case "Juni", "Juli", "August" -> System.out.println("Sommer");
+            case "September", "Oktober", "November" -> System.out.println("Herbst");
+            default -> System.out.println("Kein gültiger Monat!");
         }
 
 
@@ -93,30 +54,10 @@ public class Main {
         int monthNumber = scanner2.nextInt();
 
         switch (monthNumber) {
-            case 1:
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                System.out.println("31 Tage");
-                break;
-
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                System.out.println("30 Tage");
-                break;
-
-            case 2:
-                System.out.println("28 Tage");
-                break;
-
-            default:
-                System.out.println("Ungültige Monatszahl!");
-                break;
+            case 1, 3, 5, 7, 8, 10, 12 -> System.out.println("31 Tage");
+            case 4, 6, 9, 11 -> System.out.println("30 Tage");
+            case 2 -> System.out.println("28 Tage");
+            default -> System.out.println("Ungültige Monatszahl!");
         }
 
 
@@ -135,22 +76,11 @@ public class Main {
         int classChoice = scanner.nextInt();
 
         switch (classChoice) {
-            case 1:
-                System.out.println("Warrior (Strength: 9, Agility: 5, Intelligence: 2)");
-                break;
-            case 2:
-                System.out.println("Mage (Strength: 3, Agility: 4, Intelligence: 9)");
-                break;
-            case 3:
-                System.out.println("Rogue (Strength: 5, Agility: 9, Intelligence: 4)");
-                break;
-            case 4:
-                System.out.println("Cleric (Strength: 4, Agility: 3, Intelligence: 8)");
-                break;
-            default:
-                System.out.println("Ungültige Auswahl!");
-                break;
-
+            case 1 -> System.out.println("Warrior (Strength: 9, Agility: 5, Intelligence: 2)");
+            case 2 -> System.out.println("Mage (Strength: 3, Agility: 4, Intelligence: 9)");
+            case 3 -> System.out.println("Rogue (Strength: 5, Agility: 9, Intelligence: 4)");
+            case 4 -> System.out.println("Cleric (Strength: 4, Agility: 3, Intelligence: 8)");
+            default -> System.out.println("Ungültige Auswahl!");
         }
 
 
@@ -191,113 +121,47 @@ public class Main {
         if (languageForTranslate == 1) {
             // German
             switch (numberForTranslate) {
-                case 0:
-                    System.out.println("null");
-                    break;
-                case 1:
-                    System.out.println("eins");
-                    break;
-                case 2:
-                    System.out.println("zwei");
-                    break;
-                case 3:
-                    System.out.println("drei");
-                    break;
-                case 4:
-                    System.out.println("vier");
-                    break;
-                case 5:
-                    System.out.println("fünf");
-                    break;
-                case 6:
-                    System.out.println("sechs");
-                    break;
-                case 7:
-                    System.out.println("sieben");
-                    break;
-                case 8:
-                    System.out.println("acht");
-                    break;
-                case 9:
-                    System.out.println("neun");
-                    break;
-                default:
-                    System.out.println("Ungültige Zahl!");
-                    break;
+                case 0 -> System.out.println("null");
+                case 1 -> System.out.println("eins");
+                case 2 -> System.out.println("zwei");
+                case 3 -> System.out.println("drei");
+                case 4 -> System.out.println("vier");
+                case 5 -> System.out.println("fünf");
+                case 6 -> System.out.println("sechs");
+                case 7 -> System.out.println("sieben");
+                case 8 -> System.out.println("acht");
+                case 9 -> System.out.println("neun");
+                default -> System.out.println("Ungültige Zahl!");
             }
         } else if (languageForTranslate == 2) {
             // English
             switch (numberForTranslate) {
-                case 0:
-                    System.out.println("zero");
-                    break;
-                case 1:
-                    System.out.println("one");
-                    break;
-                case 2:
-                    System.out.println("two");
-                    break;
-                case 3:
-                    System.out.println("three");
-                    break;
-                case 4:
-                    System.out.println("four");
-                    break;
-                case 5:
-                    System.out.println("five");
-                    break;
-                case 6:
-                    System.out.println("six");
-                    break;
-                case 7:
-                    System.out.println("seven");
-                    break;
-                case 8:
-                    System.out.println("eight");
-                    break;
-                case 9:
-                    System.out.println("nine");
-                    break;
-                default:
-                    System.out.println("Invalid digit!");
-                    break;
+                case 0 -> System.out.println("zero");
+                case 1 -> System.out.println("one");
+                case 2 -> System.out.println("two");
+                case 3 -> System.out.println("three");
+                case 4 -> System.out.println("four");
+                case 5 -> System.out.println("five");
+                case 6 -> System.out.println("six");
+                case 7 -> System.out.println("seven");
+                case 8 -> System.out.println("eight");
+                case 9 -> System.out.println("nine");
+                default -> System.out.println("Invalid digit!");
             }
         } else if (languageForTranslate == 3) {
             // Japanese
             switch (numberForTranslate) {
-                case 0:
-                    System.out.println("zero");
-                    break;
-                case 1:
-                    System.out.println("ichi");
-                    break;
-                case 2:
-                    System.out.println("ni");
-                    break;
-                case 3:
-                    System.out.println("san");
-                    break;
-                case 4:
-                    System.out.println("shi");
-                    break;
-                case 5:
-                    System.out.println("go");
-                    break;
-                case 6:
-                    System.out.println("roku");
-                    break;
-                case 7:
-                    System.out.println("nana");
-                    break;
-                case 8:
-                    System.out.println("hachi");
-                    break;
-                case 9:
-                    System.out.println("kyuu");
-                    break;
-                default:
-                    System.out.println("Mukō na sūchi");
-                    break;
+                case 0 -> System.out.println("zero");
+                case 1 -> System.out.println("ichi");
+                case 2 -> System.out.println("ni");
+                case 3 -> System.out.println("san");
+                case 4 -> System.out.println("shi");
+                case 5 -> System.out.println("go");
+                case 6 -> System.out.println("roku");
+                case 7 -> System.out.println("nana");
+                case 8 -> System.out.println("hachi");
+                case 9 -> System.out.println("kyuu");
+                default -> System.out.println("Mukō na sūchi");
             }
         } else {
             System.out.println("Ungültige Sprachwahl!");
@@ -329,29 +193,17 @@ public class Main {
 
 
         switch (operation) {
-            case "addition":
-                System.out.println("Ergebnis: " + (num1 + num2));
-                break;
-
-            case "subtraction":
-                System.out.println("Ergebnis: " + (num1 - num2));
-                break;
-
-            case "multiplication":
-                System.out.println("Ergebnis: " + (num1 * num2));
-                break;
-
-            case "division":
+            case "addition" -> System.out.println("Ergebnis: " + (num1 + num2));
+            case "subtraction" -> System.out.println("Ergebnis: " + (num1 - num2));
+            case "multiplication" -> System.out.println("Ergebnis: " + (num1 * num2));
+            case "division" -> {
                 if (num2 == 0) {
                     System.out.println("Warnung: Die zweite Zahl darf nicht 0 sein!");
                 } else {
                     System.out.println("Ergebnis: " + (num1 / num2));
                 }
-                break;
-
-            default:
-                System.out.println("Ungültige Operation!");
-                break;
+            }
+            default -> System.out.println("Ungültige Operation!");
         }
 
 
