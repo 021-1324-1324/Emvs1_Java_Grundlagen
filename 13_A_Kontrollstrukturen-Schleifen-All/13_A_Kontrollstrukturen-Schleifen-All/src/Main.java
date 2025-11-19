@@ -1,3 +1,5 @@
+import java.time.Year;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -12,7 +14,7 @@ public class Main {
         //      Hint2: Check if your implementation is correct. For example; the Year 1900 is not a leap year.
         //--------------------------------------------------------------------------------------------------------------
 
-        int currentYear = java.time.Year.now().getValue();
+        int currentYear = Year.now().getValue();
         for (int year = 0; year <= currentYear; year++) {
             if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
                 System.out.println(year);
@@ -26,6 +28,7 @@ public class Main {
         //      If a number is divisible by five, then print "Buzz".
         //      If a number is divisible by three and five, print "FizzBuzz".
         //--------------------------------------------------------------------------------------------------------------
+
 
         for (int i = 1; i <= 10; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
@@ -45,42 +48,27 @@ public class Main {
         //      Example: n = 7 -> "It's a prime number!"
         //      Example: n = 10 -> "It's not a prime number!"
         //--------------------------------------------------------------------------------------------------------------
-
-        int n = 7;
+        int n = 8;
         boolean isPrime = true;
-        if (n <= 2) {
-            isPrime = false;
-        } else {
-            for (int i = 2; i <= Math.sqrt(n); i++) {
-                if (n % i == 0) {
-                    isPrime = false;
-                    break;
-                }
+        for (int numberInBetween = 2; numberInBetween < n; numberInBetween++) {
+            if (n % numberInBetween == 0) {
+                isPrime = false;
             }
         }
-
-        if (isPrime) {
-            System.out.println(n + " -> It's a prime number!");
-        } else {
-            System.out.println(n + " -> It's not a prime number!");
-        }
-
+        System.out.println(isPrime);
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 04");
         // 04. Print all prime numbers from 2-100.
         //--------------------------------------------------------------------------------------------------------------
 
-        for (int num = 2; num <= 100; num++) {
-            boolean prime = true;
-            for (int i = 2; i <= Math.sqrt(num); i++) {
-                if (num % i == 0) {
-                    prime = false;
-                    break;
-                }
-            }
-            if (prime) {
-                System.out.println(num);
-            }
+    for (int a = 2; a<=8;a++)
+
+        for (int numberInBetween = 2; numberInBetween < a; numberInBetween++) {
+            boolean isPrime1 = a % numberInBetween != 0;
+
+            System.out.println(isPrime1);
+            System.out.println(a);
         }
+
     }
 }
